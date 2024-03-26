@@ -1,0 +1,44 @@
+!#/usr/bin/env python 3
+""" Python code demonstrating some of the functionalities mentioned for the SeamlessGrade project. """
+
+class Student:
+    def __init__(self, student_id, name):
+        self.student_id = student_id
+        self.name = name
+        self.grades = {}
+
+    def add_grade(self, subject, grade):
+        self.grades[subject] = grade
+
+    def get_grades(self):
+        return self.grades
+
+class Teacher:
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+
+    def authenticate(self, entered_username, entered_password):
+        return self.username == entered_username and self.password == entered_password
+
+# Sample student and teacher
+student1 = Student("12345", "John Doe")
+teacher1 = Teacher("teacher1", "password123")
+
+# Adding grades for student1
+student1.add_grade("Math", 85)
+student1.add_grade("Science", 90)
+student1.add_grade("History", 75)
+
+# Authentication example
+entered_username = input("Enter username: ")
+entered_password = input("Enter password: ")
+
+if teacher1.authenticate(entered_username, entered_password):
+    print("Authentication successful!")
+    print("Student Grades:")
+    for subject, grade in student1.get_grades().items():
+        print(f"{subject}: {grade}")
+else:
+    print("Authentication failed. Access denied.")
+
