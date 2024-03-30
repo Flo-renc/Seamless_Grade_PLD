@@ -21,7 +21,7 @@ class Teacher:
     def authenticate(self, entered_username, entered_password):
         return self.username == entered_username and self.password == entered_password
 
-# Sample student and teacher
+# Student and teacher Log in 
 student1 = Student("12345", "John Doe")
 teacher1 = Teacher("teacher1", "password123")
 
@@ -30,7 +30,7 @@ student1.add_grade("Math", 85)
 student1.add_grade("Science", 90)
 student1.add_grade("History", 75)
 
-# Authentication example
+# Authentication 
 entered_username = input("Enter username: ")
 entered_password = input("Enter password: ")
 
