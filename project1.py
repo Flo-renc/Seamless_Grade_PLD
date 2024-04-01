@@ -8,6 +8,9 @@ def login():
         messagebox.showerror('Error', 'Fields cannnot be empty')
     elif username_entry.get() == 'Florence' and password_entry.get() == '1304':
         messagebox.showinfo('Success', 'Welcome')
+        window.destroy()
+        import Education
+       
     else:
         messagebox.showerror('Error', 'Please enter correct credentials')
 
@@ -18,6 +21,8 @@ window = Tk()
 window.geometry('1244x700+0+0') # the measurements (width and height) of the window the 0s make sure it stars
 
 window.resizable(False, False) #this makes sure that the window cannot be maximized
+ 
+window.title('Student Management System')
 
 back_ground_image = PhotoImage(file='background.jpeg.png') # image path
 
