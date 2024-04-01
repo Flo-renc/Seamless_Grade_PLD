@@ -15,5 +15,8 @@ datetimeLabel = Label(window, font=('times new Roman', 12, 'bold'))
 datetimeLabel.place(x=5, y=5)
 
 clock()  # Start the clock function
+s='Student Management System'
+slideLabel=Label(window,text=s,font=('Arial',28,'bold'))
+slideLabel.place(x=200,y=0)
 
 window.mainloop()
