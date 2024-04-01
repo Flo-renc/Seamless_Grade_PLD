@@ -1,5 +1,13 @@
 from tkinter import *
 import time
+count=0
+text=''
+def slide():
+    global text,count
+    text=text+s[count]
+    slideLabel.config(text=text)
+    count+=1
+    slideLabel.after(300,slide)
 
 def clock():
     date = time.strftime('%d/%m/%Y')
@@ -18,5 +26,5 @@ clock()  # Start the clock function
 s='Student Management System'
 slideLabel=Label(window,text=s,font=('Arial',28,'bold'))
 slideLabel.place(x=200,y=0)
-
+slide()
 window.mainloop()
