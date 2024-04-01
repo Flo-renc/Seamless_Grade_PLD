@@ -4,7 +4,7 @@ import time
 def clock():
     date = time.strftime('%d/%m/%Y')
     current_time = time.strftime('%H:%M:%S')
-    datetimeLabel.config(text=f"{date} {current_time}")  # Update label text
+    datetimeLabel.config(text=f"   date: {date}\nTime:{current_time}")  # Update label text
     window.after(1000, clock)  # Update the clock every second
 
 window = Tk()
